@@ -1,10 +1,7 @@
 import NavBar from 'react-bootstrap/Navbar';
 import { Nav, Navbar } from 'react-bootstrap';
-import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import Offcanvas from 'react-bootstrap/Offcanvas';
+import { NavLink } from 'react-router-dom';
 
 export default function Header() {
     let expand = false;
@@ -19,9 +16,9 @@ export default function Header() {
                     />
                 </Navbar.Brand>
                 <Nav> 
-                    <Nav.Link> MỚI </Nav.Link>
-                    <Nav.Link> TIÊU ĐIỂM </Nav.Link>
-                    <Nav.Link> XU HƯỚNG </Nav.Link>                    
+                    <Nav.Link as={NavLink} to="/news"> MỚI </Nav.Link>
+                    <Nav.Link as={NavLink} to='/events'> TIÊU ĐIỂM </Nav.Link>
+                    <Nav.Link as={NavLink} to='/trend'> XU HƯỚNG </Nav.Link>
                 </Nav>
             </Container>
         </NavBar>
